@@ -1,11 +1,22 @@
 {% extends 'core/base.html' %}
 
-{% block title %} About {% endblock %}
+{% block title %}Acerca de{% endblock %}
 
-{% block content %} 
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
 
-    <h2>About</h2>
+{% block headers %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografía</span>
+{% endblock %}
 
-    <p>This is the About Page</p>
-
+{% block content %}
+<div class="row"> 
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Leandro Arturi</h2>   
+        <p>Soy Desarrollador Web Full Stack y Licenciado en Sistemas de la Universidad de Buenos Aires. Me apasiona el mundo del desarrollo, lo que me mantiene en constante aprendizaje. Me motivan los proyectos a largo plazo y también disfruto resolver problemas. Me considero pragmático, flexible y organizado. Siempre estoy dispuesto a aprender y a brindar mi ayuda.</p>
+    </div>
+</div>
 {% endblock %}
